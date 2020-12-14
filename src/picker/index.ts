@@ -48,8 +48,8 @@ export class Picker {
 
         if (this.io === null) {
             if (input.hasConnection()) {
-                this.io = input.connections[0].output;
-                this.editor.removeConnection(input.connections[0]);
+                this.io = input.connections[input.connections.length - 1].output;
+                this.editor.removeConnection(input.connections[input.connections.length - 1]);
             } else {
                 this.io = input;
             }
